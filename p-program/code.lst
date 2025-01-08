@@ -1,0 +1,19 @@
+     1                                  SECTION .data
+     2 00000000 1E000000                num1 DD 30
+     3 00000004 46000000                num2 DD 70
+     4 00000008 63000000                num3 DD 99
+     5 0000000C 00000000                soma DD 00
+     6 00000010 00000000                subtracao DD 00
+     7                                  
+     8                                  SECTION .text
+     9                                  GLOBAL main
+    10                                  main:
+    11 00000000 66A1[0000]                  MOV EAX, [num1]
+    12 00000004 668B1E[0400]                MOV EBX, [num2]
+    13 00000009 668B0E[0800]                MOV ECX, [num3]
+    14 0000000E 6601D8                      ADD EAX, EBX
+    15 00000011 66A3[0C00]                  MOV [soma], EAX
+    16 00000015 6629C8                      SUB EAX, ECX
+    17 00000018 66A3[1000]                  MOV [subtracao], EAX
+    18 0000001C 66B800000000                MOV EAX, 0
+    19 00000022 C3                          RET
