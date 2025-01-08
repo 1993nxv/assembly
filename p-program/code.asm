@@ -6,9 +6,9 @@ soma DD 00
 subtracao DD 00
 
 SECTION .text
-GLOBAL _start
+GLOBAL main
 
-_start:
+main:
     ; Soma num1 + num2
     MOV EAX, [num1]
     MOV EBX, [num2]
